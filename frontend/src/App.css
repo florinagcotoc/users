@@ -1,0 +1,11 @@
+.app{
+
+}
+
+.title{
+    margin-top: 4rem;
+    color: darkcyan;
+    display: flex;
+    justify-content: center;
+
+}

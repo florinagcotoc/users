@@ -1,0 +1,19 @@
+.user-details{
+    /* width: 100%; */
+    margin: 0 auto;
+}
+
+.user-table{
+    width: 90%;
+    margin: 0 auto;
+    border: 2px solid darkcyan;
+}
+
+thead th{
+    width: 4rem;
+    text-align: center;
+}
+
+tbody tr td{
+    text-align: center;
+}
