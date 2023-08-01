@@ -1,8 +1,7 @@
 import { useEffect, useRef } from "react";
-import ReactDOM from "react-dom";
 
-const usePortal = (): React.ReactPortal | null => {
-  const portalRef = useRef<HTMLDivElement | null>(null);
+const usePortal = (): HTMLElement | null => {
+  const portalRef = useRef<HTMLElement | null>(null);
 
   useEffect(() => {
     const portalDiv = document.createElement("div");
@@ -17,9 +16,7 @@ const usePortal = (): React.ReactPortal | null => {
     };
   }, []);
 
-  return portalRef.current
-    ? ReactDOM.createPortal(null, portalRef.current)
-    : null;
+  return portalRef.current;
 };
 
 export default usePortal;

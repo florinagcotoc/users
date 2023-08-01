@@ -1,9 +1,12 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { Person } from "../../interfaces/Person";
-import "./Users.css";
-function Users() {
+import css from "./Users.module.css";
+import DrawerPortal from "../drawer/DrawerPortal";
+
+function UsersTable() {
   const [users, setUsers] = useState<Person[]>([]);
+  const [selectedUser, setSelectedUser] = useState<Person | null>(null);
 
   const getUsers = async () => {
     try {
@@ -19,52 +22,62 @@ function Users() {
     setUsers(fetchedUsers);
   };
 
+  const handleUserClick = (user: Person) => {
+    setSelectedUser(user);
+  };
+
   useEffect(() => {
     fetchUsers();
   }, []);
 
   return (
-    <div className="user-details">
-      <table className="user-table">
+    <div className={css.userDetails}>
+      <table className={css.userTable}>
         <thead>
           <tr>
             <th>Id</th>
             <th>Name</th>
-            <th>Username</th>
-            <th>Age</th>
-            <th>Email</th>
-            <th>Address</th>
-            <th>Phone</th>
-            <th>Website</th>
-            <th>Company Name</th>
           </tr>
         </thead>
         <tbody>
           {users.map((user) => (
-            <User key={user.id} user={user} />
+            <User
+              key={user.id}
+              user={user}
+              onClick={() => handleUserClick(user)}
+            />
           ))}
         </tbody>
       </table>
+      <DrawerPortal
+        isOpen={!!selectedUser}
+        onClose={() => setSelectedUser(null)}
+      >
+        {selectedUser && (
+          <>
+            <h1>User Details</h1>
+            <p>Name: {selectedUser.name}</p>
+            {/* Add other user details here */}
+          </>
+        )}
+      </DrawerPortal>
     </div>
   );
 }
 
-const User = ({ user }: { user: Person }) => {
+function User({
+  user,
+  onClick,
+}: {
+  user: Person;
+  onClick: () => void;
+}): JSX.Element {
   return (
-    <tr className="entries" key={user.id}>
+    <tr key={user.id} onClick={onClick}>
       <td>{user.id}</td>
-      <td>{user.name}</td>
-      <td>{user.username}</td>
-      <td>{user.age}</td>
-      <td>{user.email}</td>
-      <td>
-        {user.address.city} -{user.address.street} - {user.address.zipcode}{" "}
-      </td>
-      <td>{user.phone}</td>
-      <td>{user.website}</td>
-      <td>{user.companyName}</td>
+      <td className={css.userNameTd}>{user.name}</td>
     </tr>
   );
-};
+}
 
-export default Users;
+export default UsersTable;

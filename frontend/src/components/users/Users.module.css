@@ -1,17 +1,20 @@
-.user-details{
-    /* width: 100%; */
+.userDetails{
     margin: 0 auto;
 }
 
-.user-table{
-    width: 90%;
+.userTable{
+    width:auto;
     margin: 0 auto;
     border: 2px solid darkcyan;
 }
 
 thead th{
-    width: 4rem;
+    width: auto;
     text-align: center;
+}
+
+.userNameTd{
+    width: 15rem;
 }
 
 tbody tr td{
