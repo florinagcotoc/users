@@ -1,12 +1,14 @@
 import "./App.css";
-import UsersTable from "./components/users/Users";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Users from "./screens/Users/Users";
 
 function App() {
   return (
-    <div className="App">
-      <h2 className="title">Users</h2>
-      <UsersTable />
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/users" element={<Users />}></Route>
+      </Routes>
+    </Router>
   );
 }
 

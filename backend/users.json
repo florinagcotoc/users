@@ -3,6 +3,7 @@
     {
       "id": 1,
       "name": "Leanne Graham",
+      "ocupation": "Software Engineer",
       "username": "Bret",
       "age": 54,
       "email": "Sincere@april.biz",
@@ -18,6 +19,7 @@
     {
       "id": 2,
       "name": "Ervin Howell",
+      "ocupation": "Pilot",
       "username": "Antonette",
       "age": 34,
       "email": "Shanna@melissa.tv",
@@ -33,6 +35,7 @@
     {
       "id": 3,
       "name": "Clementine Bauch",
+      "ocupation": "Mechanical Engineer",
       "username": "Samantha",
       "age": 23,
       "email": "Nathan@yesenia.net",
@@ -48,6 +51,7 @@
     {
       "id": 4,
       "name": "Patricia Lebsack",
+      "ocupation": "Hairstylist",
       "username": "Karianne",
       "age": 28,
       "email": "Julianne.OConner@kory.org",
@@ -63,6 +67,7 @@
     {
       "id": 5,
       "name": "Chelsey Dietrich",
+      "ocupation": "Tester",
       "username": "Kamren",
       "age": 64,
       "email": "Lucio_Hettinger@annie.ca",
@@ -78,6 +83,7 @@
     {
       "id": 6,
       "name": "Mrs. Dennis Schulist",
+      "ocupation": "Software Engineer",
       "username": "Leopoldo_Corkery",
       "age": 33,
       "email": "Karley_Dach@jasper.info",
@@ -93,6 +99,7 @@
     {
       "id": 7,
       "name": "Kurtis Weissnat",
+      "ocupation": "Real Estate Agent",
       "username": "Elwyn.Skiles",
       "age": 21,
       "email": "Telly.Hoeger@billy.biz",
@@ -108,6 +115,7 @@
     {
       "id": 8,
       "name": "Nicholas Runolfsdottir V",
+      "ocupation": "Manager",
       "username": "Maxime_Nienow",
       "age": 24,
       "email": "Sherwood@rosamond.me",
@@ -123,6 +131,7 @@
     {
       "id": 9,
       "name": "Glenna Reichert",
+      "ocupation": "Director",
       "username": "Delphine",
       "age": 37,
       "email": "Chaim_McDermott@dana.io",
@@ -138,6 +147,7 @@
     {
       "id": 10,
       "name": "Clementina DuBuque",
+      "ocupation": "Dentist",
       "username": "Moriah.Stanton",
       "age": 28,
       "email": "Rey.Padberg@karina.biz",

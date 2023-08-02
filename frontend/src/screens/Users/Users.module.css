@@ -1,5 +1,11 @@
-.userDetails{
-    margin: 0 auto;
+.usersScreen{
+    margin: 10rem auto;
+    display: flex;
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    height: 100vh;
+    justify-content: space-between;
 }
 
 .userTable{
